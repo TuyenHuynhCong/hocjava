@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;BaiTap_HuongDoiTuong&apos; to &apos;ViDu.OPP/src&apos;&#x0D;&#x0A;- Original project: &apos;GiaiBT&apos;&#x0D;&#x0A;- Destination element: &apos;ViDu.OPP/src&apos;&#x0D;&#x0A;- Original element: &apos;GiaiBT/src/BaiTap_HuongDoiTuong&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=ViDu.OPP/src" element1="/src&lt;BaiTap_HuongDoiTuong" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1507083492651" version="1.0"/>
+</session>

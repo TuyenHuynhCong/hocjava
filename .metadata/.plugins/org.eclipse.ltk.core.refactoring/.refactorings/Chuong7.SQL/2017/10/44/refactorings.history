@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;SQLJDBC&apos; to &apos;TestDriver&apos;&#x0D;&#x0A;- Original project: &apos;Chuong7.SQL&apos;&#x0D;&#x0A;- Original element: &apos;Chuong7.SQL/src/SQLJDBC&apos;&#x0D;&#x0A;- Renamed element: &apos;Chuong7.SQL/src/TestDriver&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;SQLJDBC&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;SQLJDBC" name="TestDriver" qualified="false" references="true" stamp="1509353403715" textual="false" version="1.0"/>
+</session>

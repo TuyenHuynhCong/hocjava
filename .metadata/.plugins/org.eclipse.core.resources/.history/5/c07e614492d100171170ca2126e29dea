@@ -1,0 +1,108 @@
+package business;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JPasswordField;
+import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.awt.event.ActionEvent;
+
+public class TableDemo extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField username;
+	private JPasswordField password;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					TableDemo frame = new TableDemo();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public TableDemo() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblUsername = new JLabel("Username");
+		lblUsername.setBounds(93, 63, 46, 14);
+		contentPane.add(lblUsername);
+		
+		JLabel lblPassword = new JLabel("Password");
+		lblPassword.setBounds(93, 145, 46, 14);
+		contentPane.add(lblPassword);
+		
+		username = new JTextField();
+		username.setBounds(243, 60, 86, 20);
+		contentPane.add(username);
+		username.setColumns(10);
+		
+		JButton btnLogin = new JButton("LOGIN");
+		btnLogin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try{
+		            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		            String url="jdbc:sqlserver://ADMIN\\SQLEXPRESS;databaseName=UED;user=tuyen;password=1234";
+		            Connection con=DriverManager.getConnection(url);
+		            String sql="Select * from HocSinh where username=? and password=?";
+		            PreparedStatement pst=con.prepareStatement(sql);
+		            pst.setString(1,username.getText());
+		            pst.setString(2,password.getText());
+		            ResultSet rs=pst.executeQuery();
+		            if (rs.next()) {
+	                    
+	 JOptionPane.showConfirmDialog(null,"username or password n");
+	                    
+	                } else {
+	                    JOptionPane.showMessageDialog(null, "Username or Password not Correct");
+	                    lblUsername.setText(" ");
+	                    lblPassword.setText("  ");
+	                }
+		            con.close();
+		            
+	            } catch (Exception ex) {
+	                JOptionPane.showMessageDialog(null, ex.toString());
+	            }
+			}
+			
+		});
+		btnLogin.setBounds(63, 204, 89, 23);
+		contentPane.add(btnLogin);
+		
+		JButton btnExit = new JButton("EXIT");
+		btnExit.setBounds(229, 204, 89, 23);
+		contentPane.add(btnExit);
+		
+		password = new JPasswordField();
+		password.setBounds(244, 139, 87, 20);
+		contentPane.add(password);
+	}
+
+}

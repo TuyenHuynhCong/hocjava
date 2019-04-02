@@ -1,0 +1,28 @@
+package HashMap;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+
+public class HocHashMap {
+
+	public static void main(String[] args) {
+		HashMap<Integer,String> map=new HashMap<Integer, String>();
+		map.put(1,"Co");
+		map.put(2,"Cong");
+		map.put(3,"Mai");
+		map.put(4,"Sac");
+		map.put(5,"Co");
+		map.put(6,"Ngay");
+		map.put(7,"Nen");
+		map.put(8,"Kim");
+		//lay ten su dung values
+		 Collection<String>dsTen= map.values();
+		 for(String Ten:dsTen)
+		 {
+			 System.out.println(Ten);
+		 }
+		
+	}
+
+}

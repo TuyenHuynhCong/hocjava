@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Model.Circle_Bai4&apos; to &apos;Circle&apos;&#x0D;&#x0A;- Original project: &apos;Java_OnTap&apos;&#x0D;&#x0A;- Original element: &apos;Model.Circle_Bai4&apos;&#x0D;&#x0A;- Renamed element: &apos;Model.Circle&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Circle_Bai4&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Model{Circle_Bai4.java[Circle_Bai4" matchStrategy="1" name="Circle" qualified="false" references="true" similarDeclarations="false" stamp="1516418039060" textual="false" version="1.0"/>
+</session>
